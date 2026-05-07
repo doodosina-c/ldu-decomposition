@@ -37,7 +37,7 @@ if __name__ == "__main__":
     shape = 1000
     epsilon = 1e-300
     project_root = os.path.dirname(os.path.abspath(__file__))
-    path = os.path.join(project_root, "logs", "logs.bin")
+    path = os.path.join(project_root, "logs", "benchmarks.bin")
     
     cols = ["accuracy of computation", "contextualized accuracy of computation", "total time"]
     df = load_data(path)
