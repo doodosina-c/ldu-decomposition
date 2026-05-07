@@ -29,8 +29,10 @@ if __name__ == "__main__":
     path = os.path.join(project_root, "logs", "logs.bin")
 
     shape, runs = 1_000, 10
+    shapes = np.array([50, 100, 500])
+    i = shapes.sum() * runs - 1
 
-    df = read_logfile(path)[6499:16499]
+    df = read_logfile(path)[i : i + shape * runs]
     c = shape - df.iloc[:-2, 1].unique() - 1
     comdis = (df["amresccl"].to_numpy().reshape(runs, shape) + df["amresup"].to_numpy().reshape(runs, shape) * c + df["amresn"].to_numpy().reshape(runs, shape)) * c
     comdis /= comdis.sum(axis=1)[:, np.newaxis]
