@@ -84,3 +84,7 @@ A right-hand side vector.
 A vector of unknowns.
 #### Notes
 The data types of arrays `L`, `D`, `U` must be `numpy.float64`, `P`, `Q` must be `numpy.int8`.
+
+---
+
+For more information on the implementation, see: https://github.com/doodosina-c/ldu-decomposition-paper
